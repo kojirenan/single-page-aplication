@@ -18,15 +18,15 @@ body {
 }
 
 nav {
-  height: 12.2rem;
-  position: absolute;
+  position: fixed;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 3.2rem;
 
-  font-size: 2.4rem;
-  line-height: 2.2rem;
-  margin-left: 7.2rem;
+  gap: 1.4rem;
+  margin: 0 10vw;
+  padding: 1.6rem 0;
+  font-size: 1.3rem;
 }
 
 nav a {
@@ -56,25 +56,21 @@ nav a {
   margin-bottom: 2.4rem;
 }
 
-.universe,
-.exploration {
-  margin-left: 10.2rem;
-}
-
-.universe h2,
-.exploration h2 {
-  margin-bottom: 1.6rem;
+.exploration,
+.universe {
+  margin: 0 10vw;
 }
 
 h1,
 h2 {
   color: var(--font-hcolor);
-  font-size: 4.8rem;
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
 }
 
 p {
-  width: 64.8rem;
-  font-size: 1.8rem;
+  max-width: 64.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: var(--font-hcolor);
   line-height: 2.9rem;
@@ -82,11 +78,10 @@ p {
 
 button {
   font-size: 1.4rem;
-  line-height: 2.4rem;
 
   background: none;
-  border: .2rem solid #FFF;
-  border-radius: .5rem;
+  border: 0.2rem solid #fff;
+  border-radius: 0.5rem;
 
   text-transform: uppercase;
   text-align: center;
@@ -101,11 +96,20 @@ button a {
 
 button:hover,
 button:hover a {
-  background: #FFF;
+  background: #fff;
   color: var(--font-btncolor);
 }
 
 .check {
   color: var(--font-hcolor);
   font-weight: 700;
+}
+
+@media (min-width: 425px) {
+  nav,
+  .universe,
+  .exploration {
+    min-width: none;
+    margin: 0 10vw;
+  }
 }
